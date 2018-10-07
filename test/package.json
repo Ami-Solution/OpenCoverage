@@ -1,0 +1,36 @@
+{
+  "name": "health-exp",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "./scripts/ganache.sh",
+    "ganache": "./scripts/ganache.sh",
+    "dapp": "cd dapp && node --max-old-space-size=4096 scripts/start.js",
+    "test": "./scripts/test.sh",
+    "test-circleci": "truffle compile && truffle test",
+    "netlify-build": "./scripts/build.sh",
+    "staging-build": "./scripts/build.sh",
+    "production-build": "./scripts/build.sh",
+    "compile": "truffle compile && apply-registry build/contracts",
+    "lambda": "cd lambda && ./lambda-serve.sh"
+  },
+  "devDependencies": {
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "dotenv": "^4.0.0",
+    "ganache-cli": "^6.1.8",
+    "truffle": "^4.1.14",
+    "truffle-deploy-registry": "^0.3.0",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^0.20.6",
+    "zeppelin-solidity": "1.10.0"
+  },
+  "dependencies": {
+    "date-fns": "^2.0.0-alpha.16",
+    "websocket": "^1.0.26"
+  }
+}

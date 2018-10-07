@@ -1,0 +1,1633 @@
+{
+  "contractName": "RegistryLookup",
+  "abi": [],
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582047fc13ce248b6bc233fb28d57218bc3bebe45ae7e4eddf1dbd61d966ad8cd9e40029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582047fc13ce248b6bc233fb28d57218bc3bebe45ae7e4eddf1dbd61d966ad8cd9e40029",
+  "sourceMap": "141:479:6:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "141:479:6:-;;;;;;;;",
+  "source": "pragma solidity ^0.4.23;\n\nimport './DoctorManager.sol';\nimport './Registry.sol';\nimport './PatientPolicy.sol';\nimport './DoctorClaims.sol';\n\nlibrary RegistryLookup {\n\n  function doctorManager(Registry self) internal view returns (DoctorManager) {\n    return DoctorManager(self.lookup(keccak256(\"DoctorManager\")));\n  }\n\n  function patientPolicy(Registry self) internal view returns (PatientPolicy) {\n    return PatientPolicy(self.lookup(keccak256(\"PatientPolicy\")));\n  }\n\n  function doctorClaims(Registry self) internal view returns (DoctorClaims) {\n    return DoctorClaims(self.lookup(keccak256(\"DoctorClaims\")));\n  }\n\n}\n",
+  "sourcePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/RegistryLookup.sol",
+  "ast": {
+    "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/RegistryLookup.sol",
+    "exportedSymbols": {
+      "RegistryLookup": [
+        1042
+      ]
+    },
+    "id": 1043,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 986,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/DoctorManager.sol",
+        "file": "./DoctorManager.sol",
+        "id": 987,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 533,
+        "src": "26:29:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/Registry.sol",
+        "file": "./Registry.sol",
+        "id": 988,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 985,
+        "src": "56:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/PatientPolicy.sol",
+        "file": "./PatientPolicy.sol",
+        "id": 989,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 903,
+        "src": "81:29:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/DoctorClaims.sol",
+        "file": "./DoctorClaims.sol",
+        "id": 990,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 337,
+        "src": "111:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1042,
+        "linearizedBaseContracts": [
+          1042
+        ],
+        "name": "RegistryLookup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1006,
+              "nodeType": "Block",
+              "src": "245:72:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "446f63746f724d616e61676572",
+                                "id": 1001,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "294:15:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_c5b207ee903df7dab8d7c4058474f4fcce1f1fc16295edbf2241988864df26b7",
+                                  "typeString": "literal_string \"DoctorManager\""
+                                },
+                                "value": "DoctorManager"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_c5b207ee903df7dab8d7c4058474f4fcce1f1fc16295edbf2241988864df26b7",
+                                  "typeString": "literal_string \"DoctorManager\""
+                                }
+                              ],
+                              "id": 1000,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "284:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1002,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "284:26:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 998,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 992,
+                            "src": "272:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 999,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "272:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1003,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "272:39:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 997,
+                      "name": "DoctorManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 532,
+                      "src": "258:13:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_DoctorManager_$532_$",
+                        "typeString": "type(contract DoctorManager)"
+                      }
+                    },
+                    "id": 1004,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "258:54:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorManager_$532",
+                      "typeString": "contract DoctorManager"
+                    }
+                  },
+                  "functionReturnParameters": 996,
+                  "id": 1005,
+                  "nodeType": "Return",
+                  "src": "251:61:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1007,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doctorManager",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 993,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 992,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1007,
+                  "src": "192:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 991,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "192:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 996,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 995,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1007,
+                  "src": "230:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DoctorManager_$532",
+                    "typeString": "contract DoctorManager"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 994,
+                    "name": "DoctorManager",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 532,
+                    "src": "230:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorManager_$532",
+                      "typeString": "contract DoctorManager"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:15:6"
+            },
+            "scope": 1042,
+            "src": "169:148:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1023,
+              "nodeType": "Block",
+              "src": "397:72:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "50617469656e74506f6c696379",
+                                "id": 1018,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "446:15:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_a3d51fda0948c786fee4aaf48c24225a5a241da1eee36cfe92e049110e68daba",
+                                  "typeString": "literal_string \"PatientPolicy\""
+                                },
+                                "value": "PatientPolicy"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_a3d51fda0948c786fee4aaf48c24225a5a241da1eee36cfe92e049110e68daba",
+                                  "typeString": "literal_string \"PatientPolicy\""
+                                }
+                              ],
+                              "id": 1017,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "436:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1019,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "436:26:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1015,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1009,
+                            "src": "424:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 1016,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "424:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1020,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "424:39:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1014,
+                      "name": "PatientPolicy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 902,
+                      "src": "410:13:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_PatientPolicy_$902_$",
+                        "typeString": "type(contract PatientPolicy)"
+                      }
+                    },
+                    "id": 1021,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "410:54:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                      "typeString": "contract PatientPolicy"
+                    }
+                  },
+                  "functionReturnParameters": 1013,
+                  "id": 1022,
+                  "nodeType": "Return",
+                  "src": "403:61:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1024,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "patientPolicy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1010,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1009,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1024,
+                  "src": "344:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1008,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "344:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "343:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1013,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1012,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1024,
+                  "src": "382:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                    "typeString": "contract PatientPolicy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1011,
+                    "name": "PatientPolicy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 902,
+                    "src": "382:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                      "typeString": "contract PatientPolicy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "381:15:6"
+            },
+            "scope": 1042,
+            "src": "321:148:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1040,
+              "nodeType": "Block",
+              "src": "547:70:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "446f63746f72436c61696d73",
+                                "id": 1035,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "595:14:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_59787e84493293287cc6a9d89313c1c00465e598cf5550c8ef9dee3895e8ca0d",
+                                  "typeString": "literal_string \"DoctorClaims\""
+                                },
+                                "value": "DoctorClaims"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_59787e84493293287cc6a9d89313c1c00465e598cf5550c8ef9dee3895e8ca0d",
+                                  "typeString": "literal_string \"DoctorClaims\""
+                                }
+                              ],
+                              "id": 1034,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "585:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1036,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "585:25:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1032,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1026,
+                            "src": "573:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 1033,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "573:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1037,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "573:38:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1031,
+                      "name": "DoctorClaims",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 336,
+                      "src": "560:12:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_DoctorClaims_$336_$",
+                        "typeString": "type(contract DoctorClaims)"
+                      }
+                    },
+                    "id": 1038,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "560:52:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                      "typeString": "contract DoctorClaims"
+                    }
+                  },
+                  "functionReturnParameters": 1030,
+                  "id": 1039,
+                  "nodeType": "Return",
+                  "src": "553:59:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1041,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doctorClaims",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1027,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1026,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1041,
+                  "src": "495:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1025,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "495:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "494:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1030,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1029,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1041,
+                  "src": "533:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                    "typeString": "contract DoctorClaims"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1028,
+                    "name": "DoctorClaims",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 336,
+                    "src": "533:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                      "typeString": "contract DoctorClaims"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:14:6"
+            },
+            "scope": 1042,
+            "src": "473:144:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1043,
+        "src": "141:479:6"
+      }
+    ],
+    "src": "0:621:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/RegistryLookup.sol",
+    "exportedSymbols": {
+      "RegistryLookup": [
+        1042
+      ]
+    },
+    "id": 1043,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 986,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/DoctorManager.sol",
+        "file": "./DoctorManager.sol",
+        "id": 987,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 533,
+        "src": "26:29:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/Registry.sol",
+        "file": "./Registry.sol",
+        "id": 988,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 985,
+        "src": "56:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/PatientPolicy.sol",
+        "file": "./PatientPolicy.sol",
+        "id": 989,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 903,
+        "src": "81:29:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/bvenkatachalam/Documents/BlockChain/OpenCoverage/contracts/DoctorClaims.sol",
+        "file": "./DoctorClaims.sol",
+        "id": 990,
+        "nodeType": "ImportDirective",
+        "scope": 1043,
+        "sourceUnit": 337,
+        "src": "111:28:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1042,
+        "linearizedBaseContracts": [
+          1042
+        ],
+        "name": "RegistryLookup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1006,
+              "nodeType": "Block",
+              "src": "245:72:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "446f63746f724d616e61676572",
+                                "id": 1001,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "294:15:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_c5b207ee903df7dab8d7c4058474f4fcce1f1fc16295edbf2241988864df26b7",
+                                  "typeString": "literal_string \"DoctorManager\""
+                                },
+                                "value": "DoctorManager"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_c5b207ee903df7dab8d7c4058474f4fcce1f1fc16295edbf2241988864df26b7",
+                                  "typeString": "literal_string \"DoctorManager\""
+                                }
+                              ],
+                              "id": 1000,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "284:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1002,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "284:26:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 998,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 992,
+                            "src": "272:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 999,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "272:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1003,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "272:39:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 997,
+                      "name": "DoctorManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 532,
+                      "src": "258:13:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_DoctorManager_$532_$",
+                        "typeString": "type(contract DoctorManager)"
+                      }
+                    },
+                    "id": 1004,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "258:54:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorManager_$532",
+                      "typeString": "contract DoctorManager"
+                    }
+                  },
+                  "functionReturnParameters": 996,
+                  "id": 1005,
+                  "nodeType": "Return",
+                  "src": "251:61:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1007,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doctorManager",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 993,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 992,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1007,
+                  "src": "192:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 991,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "192:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 996,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 995,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1007,
+                  "src": "230:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DoctorManager_$532",
+                    "typeString": "contract DoctorManager"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 994,
+                    "name": "DoctorManager",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 532,
+                    "src": "230:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorManager_$532",
+                      "typeString": "contract DoctorManager"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:15:6"
+            },
+            "scope": 1042,
+            "src": "169:148:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1023,
+              "nodeType": "Block",
+              "src": "397:72:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "50617469656e74506f6c696379",
+                                "id": 1018,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "446:15:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_a3d51fda0948c786fee4aaf48c24225a5a241da1eee36cfe92e049110e68daba",
+                                  "typeString": "literal_string \"PatientPolicy\""
+                                },
+                                "value": "PatientPolicy"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_a3d51fda0948c786fee4aaf48c24225a5a241da1eee36cfe92e049110e68daba",
+                                  "typeString": "literal_string \"PatientPolicy\""
+                                }
+                              ],
+                              "id": 1017,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "436:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1019,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "436:26:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1015,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1009,
+                            "src": "424:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 1016,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "424:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1020,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "424:39:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1014,
+                      "name": "PatientPolicy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 902,
+                      "src": "410:13:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_PatientPolicy_$902_$",
+                        "typeString": "type(contract PatientPolicy)"
+                      }
+                    },
+                    "id": 1021,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "410:54:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                      "typeString": "contract PatientPolicy"
+                    }
+                  },
+                  "functionReturnParameters": 1013,
+                  "id": 1022,
+                  "nodeType": "Return",
+                  "src": "403:61:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1024,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "patientPolicy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1010,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1009,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1024,
+                  "src": "344:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1008,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "344:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "343:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1013,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1012,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1024,
+                  "src": "382:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                    "typeString": "contract PatientPolicy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1011,
+                    "name": "PatientPolicy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 902,
+                    "src": "382:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PatientPolicy_$902",
+                      "typeString": "contract PatientPolicy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "381:15:6"
+            },
+            "scope": 1042,
+            "src": "321:148:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1040,
+              "nodeType": "Block",
+              "src": "547:70:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "446f63746f72436c61696d73",
+                                "id": 1035,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "595:14:6",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_59787e84493293287cc6a9d89313c1c00465e598cf5550c8ef9dee3895e8ca0d",
+                                  "typeString": "literal_string \"DoctorClaims\""
+                                },
+                                "value": "DoctorClaims"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_59787e84493293287cc6a9d89313c1c00465e598cf5550c8ef9dee3895e8ca0d",
+                                  "typeString": "literal_string \"DoctorClaims\""
+                                }
+                              ],
+                              "id": 1034,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1291,
+                              "src": "585:9:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 1036,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "585:25:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1032,
+                            "name": "self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1026,
+                            "src": "573:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Registry_$984",
+                              "typeString": "contract Registry"
+                            }
+                          },
+                          "id": 1033,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "lookup",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 983,
+                          "src": "573:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
+                            "typeString": "function (bytes32) view external returns (address)"
+                          }
+                        },
+                        "id": 1037,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "573:38:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1031,
+                      "name": "DoctorClaims",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 336,
+                      "src": "560:12:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_DoctorClaims_$336_$",
+                        "typeString": "type(contract DoctorClaims)"
+                      }
+                    },
+                    "id": 1038,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "560:52:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                      "typeString": "contract DoctorClaims"
+                    }
+                  },
+                  "functionReturnParameters": 1030,
+                  "id": 1039,
+                  "nodeType": "Return",
+                  "src": "553:59:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1041,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "doctorClaims",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1027,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1026,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1041,
+                  "src": "495:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Registry_$984",
+                    "typeString": "contract Registry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1025,
+                    "name": "Registry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 984,
+                    "src": "495:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$984",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "494:15:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1030,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1029,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1041,
+                  "src": "533:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                    "typeString": "contract DoctorClaims"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1028,
+                    "name": "DoctorClaims",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 336,
+                    "src": "533:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DoctorClaims_$336",
+                      "typeString": "contract DoctorClaims"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:14:6"
+            },
+            "scope": 1042,
+            "src": "473:144:6",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1043,
+        "src": "141:479:6"
+      }
+    ],
+    "src": "0:621:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-07T02:41:52.114Z"
+}
